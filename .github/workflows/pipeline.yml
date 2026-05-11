@@ -1,4 +1,4 @@
-name: Basic Pipeline
+name: Juice Shop Pipeline 
 
 on:
   push:
@@ -6,12 +6,15 @@ on:
       - main
 
 jobs:
-  basic-job:
+  docker-test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Show files
-        run: ls -la
+      - name: Start containers
+        run: docker compose up -d
+
+      - name: List containers
+        run: docker ps

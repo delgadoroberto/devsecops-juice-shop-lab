@@ -1,4 +1,4 @@
-name: Juice Shop Pipeline 
+name: DevSecOps Pipeline
 
 on:
   push:
@@ -6,15 +6,19 @@ on:
       - main
 
 jobs:
-  docker-test:
+  security-scan:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Start containers
-        run: docker compose up -d
+      - name: Pull Juice Shop image
+        run: docker pull bkimminich/juice-shop
 
-      - name: List containers
-        run: docker ps
+      - name: Run Trivy scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'bkimminich/juice-shop'
+          format: 'table'
+          severity: 'HIGH,CRITICAL'

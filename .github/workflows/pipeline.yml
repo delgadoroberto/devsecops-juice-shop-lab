@@ -3,9 +3,7 @@ name: DevSecOps Pipeline
 on:
   push:
     branches:
-      - main
-
-jobs:
+      - main jobs:
   security-scan:
     runs-on: ubuntu-latest
 
@@ -23,3 +21,11 @@ jobs:
           format: 'table'
           severity: 'HIGH,CRITICAL'
           exit-code: '1'
+
+      - name: Run Trivy filesystem scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'table'
+          severity: 'HIGH,CRITICAL'

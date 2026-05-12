@@ -29,3 +29,10 @@ on:
           scan-ref: '.'
           format: 'table'
           severity: 'HIGH,CRITICAL'
+
+      - name: Secret scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          scanners: 'secret'

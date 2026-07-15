@@ -174,6 +174,21 @@ F --> G
 
 ---
 
+## Screenshots
+
+### GitHub Actions Pipeline
+
+![Pipeline](docs/screenshots/workflow-summary.png)
+
+### Container Security Scan
+
+![Container Scan](docs/screenshots/image-scan.png)
+
+### Secret Detection
+
+![Secret Detection](docs/screenshots/secret-detection.png)
+
+---
 # Expected Results
 
 This repository intentionally scans **OWASP Juice Shop**, a deliberately vulnerable application developed for security education.

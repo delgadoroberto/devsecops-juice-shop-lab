@@ -35,6 +35,7 @@ jobs:
           image-ref: bkimminich/juice-shop
           format: table
           severity: HIGH,CRITICAL
+          # Fail the pipeline when HIGH or CRITICAL vulnerabilities are detected.
           exit-code: "1"
           ignore-unfixed: true
 

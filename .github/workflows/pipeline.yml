@@ -32,7 +32,6 @@ jobs:
       - name: Scan Docker image
         uses: aquasecurity/trivy-action@v0.36.0
         with:
-          trivy-version: v0.72.0
           image-ref: bkimminich/juice-shop
           format: table
           severity: HIGH,CRITICAL
@@ -42,7 +41,6 @@ jobs:
       - name: Scan repository filesystem
         uses: aquasecurity/trivy-action@v0.36.0
         with:
-          trivy-version: v0.72.0
           scan-type: fs
           scan-ref: .
           format: table
@@ -51,7 +49,6 @@ jobs:
       - name: Detect exposed secrets
         uses: aquasecurity/trivy-action@v0.36.0
         with:
-          trivy-version: v0.72.0
           scan-type: fs
           scan-ref: .
           scanners: secret

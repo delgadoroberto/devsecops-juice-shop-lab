@@ -1,6 +1,6 @@
 # DevSecOps Juice Shop Lab
 
-[![DevSecOps Security Pipeline](https://github.com/YOUR_GITHUB_USERNAME/devsecops-juice-shop-lab/actions/workflows/pipeline.yml/badge.svg)](https://github.com/YOUR_GITHUB_USERNAME/devsecops-juice-shop-lab/actions/workflows/pipeline.yml)
+[![DevSecOps Security Pipeline](https://github.com/delgadoroberto/devsecops-juice-shop-lab/actions/workflows/pipeline.yml/badge.svg)](https://github.com/delgadoroberto/devsecops-juice-shop-lab/actions/workflows/pipeline.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
 ![OWASP Juice Shop](https://img.shields.io/badge/OWASP-Juice%20Shop-red)

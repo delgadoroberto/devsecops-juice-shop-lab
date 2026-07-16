@@ -24,7 +24,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Pull OWASP Juice Shop image
         run: docker pull bkimminich/juice-shop

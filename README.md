@@ -177,16 +177,19 @@ F --> G
 ## Screenshots
 
 ### GitHub Actions Pipeline
+Pipeline execution after pushing changes to the repository.
 
-![Pipeline](docs/screenshots/workflow-summary.png)
+![GitHub Actions Pipeline](docs/screenshots/github-actions-pipeline.png)
 
 ### Container Security Scan
+Trivy scans the OWASP Juice Shop container image and reports detected vulnerabilities.
 
-![Container Scan](docs/screenshots/image-scan.png)
+![Container Security Scan](docs/screenshots/trivy-image-scan.png)
 
 ### Secret Detection
+Trivy detects embedded secrets, including RSA private keys intentionally included in OWASP Juice Shop for educational purposes.
 
-![Secret Detection](docs/screenshots/secret-detection.png)
+![Secret Detection](docs/screenshots/trivy-secret-detection.png)
 
 ---
 # Expected Results

@@ -93,13 +93,39 @@ devsecops-juice-shop-lab/
 
 # Security Controls
 
-The pipeline currently performs the following security checks:
+The DevSecOps pipeline integrates multiple security controls to demonstrate automated security testing throughout the CI/CD lifecycle.
 
-| Control | Tool |
-|----------|------|
-| Container Image Scan | Trivy |
-| Filesystem Scan | Trivy |
-| Secret Detection | Trivy |
+| Security Control | Tool | Purpose |
+|------------------|------|---------|
+| Container Vulnerability Scanning | Trivy | Detect vulnerabilities in the OWASP Juice Shop Docker image. |
+| Filesystem Scanning | Trivy | Analyze project files and application dependencies for known vulnerabilities. |
+| Secret Detection | Trivy | Identify exposed secrets such as API keys, private keys, and credentials. |
+| Static Application Security Testing (SAST) | CodeQL | Perform static code analysis to identify potential security issues in source code. |
+| Dependency Management | Dependabot | Automatically monitor and update GitHub Actions and Docker dependencies. |
+
+---
+
+## Security Workflow
+
+The repository implements a layered security approach:
+
+1. **Dependency Management**
+   - Dependabot monitors GitHub Actions and Docker Compose dependencies.
+   - Automatically creates Pull Requests when updates are available.
+
+2. **Static Application Security Testing (SAST)**
+   - CodeQL analyzes the codebase for common security weaknesses and coding flaws.
+
+3. **Container Security**
+   - Trivy scans the OWASP Juice Shop container image for known vulnerabilities.
+
+4. **Filesystem Security**
+   - Trivy scans repository contents and project dependencies.
+
+5. **Secret Detection**
+   - Trivy searches for exposed credentials, private keys, API tokens, and other sensitive information.
+
+Together, these controls demonstrate a practical **Shift-Left Security** approach by identifying security issues early in the software development lifecycle.
 
 ---
 
